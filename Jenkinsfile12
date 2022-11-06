@@ -5,8 +5,8 @@ agent any
 tools { 
 maven "maven3.8.6"
 }
-stages('sourcecode') { 
-stage{
+stages { 
+stage ('sourcecode'){
 steps {
 git credentialsId: 'a959c0e9-2f79-4e41-92d7-6985cec4ef70', url: 'https://github.com/asn-technology-devops/maven-web-application.git'
 }
@@ -21,6 +21,5 @@ steps{
 sh "mvn deploy"
 }
 }//end deploy to nexus 
+}//end stages
 }//end pipeline
-
-

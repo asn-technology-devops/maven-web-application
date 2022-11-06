@@ -18,7 +18,7 @@ sh "mvn clean install sonar:sonar"
 }//end build &deploy to sonar stage 
 stage('deployintonexus'{
 steps{ 
-sh "mvn deploy'
+sh "mvn deploy"
 }
 }//end deploy to nexus 
 

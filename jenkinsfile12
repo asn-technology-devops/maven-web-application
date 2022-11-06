@@ -1,0 +1,27 @@
+pipeline { 
+
+agent any 
+
+tools { 
+maven "maven3.8.6"
+}
+stages('sourcecode'){ 
+stage{
+steps {
+
+}
+}//end sourcecode stage
+stage('build'){ 
+steps{ 
+sh "mvn clean install sonar:sonar"
+}
+}//end build &deploy to sonar stage 
+stage('deployintonexus'{
+steps{ 
+sh "mvn deploy'
+}
+}//end deploy to nexus 
+
+
+}//end stages
+}//end pipeline

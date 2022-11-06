@@ -5,7 +5,7 @@ agent any
 tools { 
 maven "maven3.8.6"
 }
-stages('sourcecode'){ 
+stages('sourcecode') { 
 stage{
 steps {
 git credentialsId: 'a959c0e9-2f79-4e41-92d7-6985cec4ef70', url: 'https://github.com/asn-technology-devops/maven-web-application.git'

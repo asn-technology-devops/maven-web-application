@@ -21,6 +21,7 @@ steps{
 sh "mvn deploy"
 }
 }//end deploy to nexus 
-}//end stages
+}
 }//end pipeline
+
 
